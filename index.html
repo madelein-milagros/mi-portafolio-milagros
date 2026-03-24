@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Milagros Ramos - Tecsup</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <!-- Espacio para tu foto -->
+            <div class="profile-photo-placeholder">
+                <span>FOTO</span>
+            </div>
+            <!-- Cuando tengas la foto, reemplaza con: 
+            <img src="tu-foto.jpg" alt="Foto de perfil" class="profile-photo"> -->
+
+            <h1>Milagros Ramos Chamorro</h1>
+            <p>Estudiante de Diseño y Desarrollo de Software</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECCIÓN: PERFIL -->
+        <section>
+            <h2><i class="fas fa-user"></i> Perfil Profesional</h2>
+            <p>
+                Estudiante de 5to ciclo de la carrera de Diseño y Desarrollo de Software en <strong>Tecsup</strong>. 
+                Con conocimientos en desarrollo web y móviles. Habilidades en documentación técnica, trabajo colaborativo 
+                y adaptativo de recursos para entornos educativos. Interés en la automatización, diseño de interfaces 
+                y mejora continua de procesos, con aprendizaje constante y el desarrollo de soluciones.
+            </p>
+        </section>
+
+        <!-- SECCIÓN: EDUCACIÓN -->
+        <section>
+            <h2><i class="fas fa-graduation-cap"></i> Educación Superior</h2>
+            <div class="education-box">
+                <h3>Instituto de Educación Superior Privado TECSUP</h3>
+                <p class="subtitle">Diseño y Desarrollo de Software</p>
+                <p class="date">2024 - Actualmente</p>
+                <p>Estudiante de 5to ciclo.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: EXPERIENCIA ACADÉMICA -->
+        <section>
+            <h2><i class="fas fa-laptop-code"></i> Experiencia Académica</h2>
+            <div class="job">
+                <h3>Curso: Desarrollo de Aplicaciones Web (2025)</h3>
+                <p class="job-title">Sistema de Gestión de Cursos</p>
+                <p>
+                    Desarrollé una aplicación web completa para gestionar cursos académicos (CRUD) con interfaz responsive.
+                </p>
+                <ul class="tech-list">
+                    <li>Spring Boot 3.5.7</li>
+                    <li>Spring Security 6 (roles ADMIN/USER)</li>
+                    <li>BCrypt & JPA/Hibernate</li>
+                    <li>MySQL & Thymeleaf</li>
+                    <li>Bootstrap 5</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROYECTOS (GRID DE 5) -->
+        <section>
+            <h2><i class="fas fa-folder-open"></i> Mis Proyectos</h2>
+            <p class="section-intro">Explora algunos de mis repositorios y trabajos recientes:</p>
+            
+            <!-- ⚠️ CONTAINER GRID PARA LAS TARJETAS -->
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Roadmap Profesional Redes</h3>
+                    <p>Proyecto interactivo que muestra la ruta de aprendizaje completa de la carrera de Redes y Comunicaciones.</p>
+                    <a href="https://github.com/madelein-milagros/Ciclo-3---Redes.git" target="_blank" rel="noopener noreferrer" class="btn-project">
+                        Ver Repositorio
+                    </a>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Calculadora Científica</h3>
+                    <p>Herramienta para estudiantes que necesitan realizar cálculos complejos de forma sencilla y accesible.</p>
+                    <a href="https://github.com/madelein-milagros/Calculadora-cientifica.git" target="_blank" rel="noopener noreferrer" class="btn-project">
+                        Ver Repositorio
+                    </a>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-database"></i></div>
+                    <h3>Tutor de Estudio con IA</h3>
+                    <p>Asistente inteligente que ayuda a repasar cursos y puede procesar documentos de hasta 20 páginas.</p>
+                    <a href="https://github.com/madelein-milagros/tutor-de-estudio-ia.git" target="_blank" rel="noopener noreferrer" class="btn-project">
+                        Ver Repositorio
+                    </a>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>App Móvil con Firebase</h3>
+                    <p>Autenticación con Firebase y CRUD de cursos usando Firestore y Jetpack Compose.</p>
+                    <a href="https://github.com/madelein-milagros/AuthFirebaseApp.git" target="_blank" rel="noopener noreferrer" class="btn-project">
+                        Ver Repositorio
+                    </a>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Coursera Organizador</h3>
+                    <p>Tus cursos, tus enlaces, todo en orden y siempre a la mano para tu aprendizaje continuo.</p>
+                    <a href="https://github.com/madelein-milagros/LinkCourse-Organizer.git" target="_blank" rel="noopener noreferrer" class="btn-project">
+                        Ver Repositorio
+                    </a>
+                </div>
+
+            </div> <!-- ⚠️ Cierre de projects-grid -->
+        </section>
+
+        <!-- SECCIÓN: INFORMACIÓN ADICIONAL -->
+        <section>
+            <h2><i class="fas fa-certificate"></i> Información Adicional</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Idiomas</h4>
+                    <p>Inglés Intermedio - TECSUP Conversa Escuela de Idiomas</p>
+                </div>
+                <div class="info-item">
+                    <h4>Certificaciones</h4>
+                    <p>Participación en Alura LATAM - Desarrollo Web y Backend (2024)</p>
+                </div>
+                <div class="info-item">
+                    <h4>Eventos</h4>
+                    <p>Asistente al evento Journey to Oracle Cloud LATAM (2025)</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Milagros Ramos. Desarrollado con ❤️ y desplegado en Render.</p>
+        <div class="social-links">
+            <a href="https://github.com/madelein-milagros" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/milagros-ramos-a8676231a" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
