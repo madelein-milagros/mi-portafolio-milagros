@@ -1,10 +1,8 @@
-/* ========================================
-   PALETA DE COLORES - MILAGROS PORTAFOLIO
-   ========================================
-   #66a5ad - Color principal (Teal)
-   #c4dfe6 - Color secundario (Azul claro)
-   #ebf5ee - Fondo principal (Menta claro)
-   ======================================== */
+/* PALETA DE COLORES
+   #66a5ad - Principal (Teal)
+   #c4dfe6 - Secundario (Azul claro)
+   #ebf5ee - Fondo (Menta claro)
+*/
 
 * {
     margin: 0;
@@ -19,11 +17,11 @@ body {
     line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
     background-color: #66a5ad;
     color: white;
-    padding: 4rem 0;
+    padding: 3rem 0;
     text-align: center;
     border-bottom: 5px solid #c4dfe6;
 }
@@ -34,7 +32,23 @@ header {
     padding: 0 20px;
 }
 
-/* Foto de Perfil Placeholder */
+/* FOTO DE PERFIL */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
 .profile-photo-placeholder {
     width: 150px;
     height: 150px;
@@ -50,17 +64,6 @@ header {
     font-size: 1.2em;
 }
 
-/* Cuando agregues tu foto real */
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    border: 4px solid white;
-    object-fit: cover;
-}
-
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -70,11 +73,28 @@ header h1 {
 header p {
     font-size: 1.2em;
     opacity: 0.95;
-    margin-top: 10px;
+    margin: 10px 0 20px;
     font-weight: 300;
 }
 
-/* ================= CONTENEDOR PRINCIPAL ================= */
+.social-links-header {
+    margin-top: 20px;
+}
+
+.social-links-header a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.social-links-header a:hover {
+    transform: translateY(-3px);
+    color: #c4dfe6;
+}
+
+/* CONTENEDOR */
 .container {
     max-width: 900px;
     margin: 40px auto;
@@ -84,7 +104,7 @@ header p {
     border-radius: 12px;
 }
 
-/* ================= SECCIONES ================= */
+/* SECCIONES */
 section {
     margin-bottom: 40px;
 }
@@ -93,7 +113,7 @@ h2 {
     color: #66a5ad;
     border-bottom: 2px solid #c4dfe6;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.8em;
     display: flex;
     align-items: center;
@@ -111,7 +131,73 @@ h2 i {
     font-style: italic;
 }
 
-/* ================= EDUCACIÓN ================= */
+/* BARRAS DE PROGRESO - HABILIDADES */
+.skills-container {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px 30px;
+}
+
+.skill-item {
+    margin-bottom: 0px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.skill-percent {
+    color: #66a5ad;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #c4dfe6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #66a5ad 0%, #c4dfe6 100%);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* EDUCACIÓN */
 .education-box {
     background-color: #f9f9f9;
     padding: 20px;
@@ -133,10 +219,10 @@ h2 i {
     color: #66a5ad;
     font-weight: bold;
     font-size: 0.9em;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-/* ================= EXPERIENCIA / JOB ================= */
+/* EXPERIENCIA */
 .job {
     background-color: #ebf5ee;
     padding: 20px;
@@ -152,7 +238,7 @@ h2 i {
 .job-title {
     font-weight: bold;
     color: #66a5ad;
-    margin-bottom: 10px;
+    margin: 10px 0;
     display: block;
 }
 
@@ -174,7 +260,7 @@ h2 i {
     font-weight: 500;
 }
 
-/* ================= GRID DE PROYECTOS - TARJETAS UNIFORMES ================= */
+/* PROYECTOS */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -192,7 +278,7 @@ h2 i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 340px; /* ⚠️ Altura mínima para uniformidad */
+    min-height: 340px;
 }
 
 .project-card:hover {
@@ -216,7 +302,7 @@ h2 i {
     color: #333;
     margin: 10px 0;
     font-size: 1.15em;
-    min-height: 55px; /* ⚠️ Para alinear títulos de diferente largo */
+    min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -228,7 +314,7 @@ h2 i {
     font-size: 0.95em;
     color: #555;
     margin: 15px 0 20px;
-    flex-grow: 1; /* ⚠️ Empuja el botón hacia abajo para alinear */
+    flex-grow: 1;
     line-height: 1.5;
     max-width: 95%;
 }
@@ -243,7 +329,7 @@ h2 i {
     font-weight: 600;
     font-size: 0.9em;
     transition: all 0.3s ease;
-    margin-top: auto; /* ⚠️ Clave: siempre alinea el botón abajo */
+    margin-top: auto;
     border: 2px solid #66a5ad;
 }
 
@@ -254,7 +340,110 @@ h2 i {
     border-color: #c4dfe6;
 }
 
-/* ================= INFORMACIÓN ADICIONAL GRID ================= */
+/* FORMULARIO DE CONTACTO */
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #c4dfe6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group label i {
+    color: #66a5ad;
+    margin-right: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c4dfe6;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #66a5ad;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #66a5ad;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #5a949c;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    background: #ebf5ee;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #66a5ad;
+}
+
+.contact-info h3 {
+    color: #66a5ad;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-item i {
+    font-size: 1.5em;
+    color: #66a5ad;
+    margin-top: 5px;
+}
+
+.contact-item h4 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* INFORMACIÓN ADICIONAL */
 .info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -285,7 +474,7 @@ h2 i {
     font-size: 0.95em;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 40px;
@@ -295,11 +484,11 @@ footer {
     border-radius: 12px 12px 0 0;
 }
 
-.social-links {
+.social-links-footer {
     margin-top: 15px;
 }
 
-.social-links a {
+.social-links-footer a {
     color: white;
     font-size: 1.8em;
     margin: 0 12px;
@@ -307,15 +496,15 @@ footer {
     display: inline-block;
 }
 
-.social-links a:hover {
+.social-links-footer a:hover {
     color: #c4dfe6;
     transform: translateY(-3px);
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     header {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     
     header h1 {
@@ -332,12 +521,16 @@ footer {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr; /* 1 columna en móvil */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     
     .project-card {
         min-height: 320px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
     }
     
     .info-grid {
@@ -354,14 +547,10 @@ footer {
         font-size: 1em;
     }
     
+    .profile-photo,
     .profile-photo-placeholder {
         width: 120px;
         height: 120px;
         font-size: 1em;
-    }
-    
-    .tech-list li {
-        font-size: 0.8em;
-        padding: 4px 10px;
     }
 }
